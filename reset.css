@@ -1,0 +1,31 @@
+*, *::after, *::before, *:after, *:before{
+    box-sizing: border-box;
+}
+
+body, h1, h2, h3, nav ul, nav li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    width: 100%;
+}
+
+blockquote{
+    quotes: '\00AB' '\00BB' '\201E' '\201C';
+}
+blockquote::before{
+    content: open-quote;
+}
+blockquote::after{
+    content: close-quote;
+}
