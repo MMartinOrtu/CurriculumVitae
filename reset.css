@@ -1,10 +1,10 @@
 *, *::after, *::before, *:after, *:before{
     box-sizing: border-box;
-}
+} 
 
-body, h1, h2, h3, nav ul, nav li {
+body, h1, h2, h3, nav ul, nav li, p, figure {
     margin: 0;
-    padding: 0;
+    padding: 0;   
 }
 
 nav ul{
@@ -16,9 +16,9 @@ a{
     color: inherit;
 }
 
-img {
+/* img {
     width: 100%;
-}
+} */
 
 blockquote{
     quotes: '\00AB' '\00BB' '\201E' '\201C';
@@ -28,4 +28,9 @@ blockquote::before{
 }
 blockquote::after{
     content: close-quote;
+}
+span.resaltar-texto{
+    text-emphasis: bolder;
+    color:black;
+    font-size: 1.2rem;
 }

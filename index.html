@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miguel Martín">
     <meta name="description" content="Portfolio de Miguel Martín">
+    <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
     <title>Miguel Martín</title>
+    <link href="https://fonts.googleapis.com/css?family=PT+Mono" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
     
@@ -19,7 +22,7 @@
         </header>
         <nav>
             <ul>
-                <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#sobre-mi">Sobre mi</a></li>
                 <li><a href="#formacion">Formación</a></li>
                 <li><a href="#experiencia">Experiencia</a></li>
                 <li><a href="#contacto">Contacto</a></li>
@@ -27,35 +30,65 @@
         </nav>
     </div>
 
-    <section id="portada">
-            
-        <header>    
-            <h1>¡Hola! Me llamo Miguel Martín</h1>
-            <p>Me dedico a la programación y el desarrollo web</p>          
-        </header>
-       <div class="imagen-wrapper">       
-        </div>
+    <section id="portada">            
+        <header>           
+            <h1><span class="hola">¡Hola!</span><br>Me llamo<br><span class="nombre">Miguel Martín</span> </h1>            
+            <div class="image-portada-wrapper"></div>         
+        </header>       
     </section>
-   
-    <section id="sobre-mi">
+    
+    <section id="sobre-mi" class="secciones">
         <header>
-            <h2>sobre mi</h2>
+            <h2>Sobre mi</h2>
         </header>
-            <div></div>
+        <article>
+            <div class="sobre-mi-wrapper">            
+                <p>Hace ya algún tiempo que empecé a sentir inquietud por el mundo de la programación y el desarrollo web. 
+                    Desde entonces ando formándome y preparándome cada día para ser un buen desarrollador.</p>             
+                <p>Antes de darme por esto de la programación he hecho muchas cosas...estudié Ciencias Ambientales, viví un tiempo en Inglaterra (estudiando y trabajando para aprender inglés)
+                    y, los últimos 9 años trabajé como gerente en una ONG.</p>
+                <p>Actualmente vivo en Jerez de la Frontera, soy padre de un peque de 2 años, por lo que ya estoy entrenado en la falta de sueño, para cuando haya que pasar la noche programando...je,je!
+                    Me gusta el deporte, dobre todo el baloncesto y ahora mismo, pasar tiempo con mi familia y amigos, eso es lo que más valoro. :-) </p>
+            </div>
+            <figure class="imagen">
+                <img src="./assets/Sobre-mi2.png" alt="Foto Miguel Martín" height="60%"width="60%" >
+            </figure>
+        </article>
     </section>
-    <section id="formacion">
+    <section id="formacion" class="secciones">
         <header>
-            <h2>Mi formación</h2>
+            <h2>Formación</h2>
         </header>
-          <div class="class"></div>
-          <div class="class"></div>
-          <div class="class"></div>
+        <article>
+            <div class="formacion-text-wrapper">
+            <p>Actualmente, estoy cursando en <span class="resaltar-texto">Ciclo Superior de formación profesional Desarrollo de Aplicaciones Multiplataforma</span>
+                en la UOC (Universidad Oberta de Catalunya) y el <span class="resaltar-texto">Web Development Bootcamp</span> en Keepcoding.</p>
+            <p>A lo largo de los últimos meses he realizado diferentes cursos, seminarios y tutoriales de programación sobre las siguientes tecnologías:</p>
+            <p class ="lenguajes">JavaScript / HTML5 / CSS3 / GIT / Java / MySQL / Android / C </p>
+            <p> Consulta más sobre mi formación en:</p>
+            </div>
+             <a href="https://www.linkedin.com/in/miguel-mart%C3%ADn-ortu%C3%B1o-1919baa1/" target="_blank"><div class="img-linkedin"></div></a>
+        </article>
     </section>
-    <section id="experiencia"></section>
-    <section id="formación"></section>
-    <section id="contacto">
+<!--     <section id="experiencia" class="secciones">
+            <header>
+                    <h2>Experiencia</h2>
+                </header>
+    </section> -->
+    <section id="contacto" class="secciones">
+        <header>
+            <h2>Contacto</h2>
+        </header>
         <form action="">
-            <input type="text">
+            <input type="text" name="name" id="name" placeholder="Name" required><br>
+            <input type="email" name="email" id="email" placeholder="Email Address"><br>
+            <input type="tel" name="phone" id="phone" placeholder="Phone Number"><br>
+            <select name="conocido">
+                    <option>Internet</option>                    
+                    <option>Amigo</option>                    
+                    <option>Otros</option>                    
+            </select>
+            <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"></textarea><br>
         </form>
     </section>
     <footer>
