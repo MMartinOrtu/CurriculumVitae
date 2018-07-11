@@ -215,15 +215,17 @@ section#sobre-mi .text-sobre-mi-wrapper{
 /* Sección Formación */
 
 section#formacion p:nth-of-type(4){
-    background-color: grey;
+    background-color: rgb(55, 157, 224);
     border-radius: 5px;
-    margin: 0.5rem;
+    width: 80%;
+    min-width: 380px;
+    margin: 0.5rem auto;
 }
 section#formacion .lenguajes{
     position: relative;
-   text-align: center;
-   font-size: 1.4rem;   
-   color:white; 
+    text-align: center;
+    font-size: 1.4rem;   
+    color:white; 
 }
 
 section#formacion li{
@@ -236,25 +238,36 @@ section#formacion li::before {
     color:rgb(247, 126, 13); 
     font-size: 1.5rem;
 }
+section#formacion .cv{
+    text-align: center;
+    font-size: 2rem;
+    color: rgb(55, 157, 224);
+}
+section#formacion .cv>a{
+    color:rgb(247, 126, 13);
+    font-size: 2.5rem;
+}
 
 /* Experiencia */
 .fa-linkedin{
     color: rgb(22, 22, 165);
 }
-section#experiencia a{
-    position: relative;
-    left:50%;
+section#experiencia article{
+    text-align: center;
 }
-/* .img-linkedin{    
-    position: relative;
-    left:40%;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    height: 150px;
-    width: 150px;
-    background-image: url(./assets/linkdin.png);
-} */
+section#experiencia a{
+    display:inline-block;    
+}
+section#experiencia .experiencia-imagen{
+    margin: .8rem;
+    float: left;
+    width: 35%;
+    min-width: 350px;
+}
+
+section#experiencia p:nth-of-type(4){
+    display:inline-block;   
+}
 
 
 /* Sección Contacto */
