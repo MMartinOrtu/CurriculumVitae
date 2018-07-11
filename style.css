@@ -13,23 +13,27 @@ body{
 .header-nav-wrapper{
  position:fixed;
  width: 100vw;
- z-index:1;              
+  z-index:1;               
 } 
 
 .header-nav-wrapper header{
-    position: relative;
-    display: inline-block;
-    z-index:1; 
-    margin-top: 1rem;
-    left: 2%;   
+   /*  position: relative;
+    display: inline-block; */
+    float:left;
+    z-index:1;
+    margin-top: 1.5rem;
+    margin-left: 1.5rem;
+    /* left: 2%;  */  
 }
 .header-nav-wrapper nav{
-    position: absolute;
-    display: inline-block;    
-    height: 3rem;
-    z-index:1;      
-    margin-top: 1rem;
-    right: 5%;
+ /*    position: absolute;
+    display: inline-block;  */
+    float:right;   
+    /* height: 3rem; */
+    z-index:1;   
+    margin-top: 1.5rem;
+    margin-right: 10%;
+    /* right: 5%; */
 }
 nav>ul li{
     display:inline-block;
@@ -80,13 +84,22 @@ nav a:hover {
   
   
   /* Section portada */
-   
-section#portada h1{
-    position: relative;
-    margin-top: 8rem;
-    display: inline-block;
+
+section#portada header{
     height: 100vh;
-    width: 60%;
+    /* padding-top:140px; */
+      
+}
+section#portada h1{
+    /* position: relative; */
+    /* margin-top: 8rem */
+   /*  display: inline-block; */
+    /* width: 60%; */
+   /*  height: 100vh; */
+    float:left;
+    width:55%;
+    min-width: 350px;    
+    padding-top:140px;
     text-align: center;
     font-size: 4.5rem;
     line-height: 1.4;
@@ -104,17 +117,21 @@ section#portada .nombre{
 }
 
 section#portada .image-portada-wrapper{
-    display: inline-block;
-    height: 80vh;
+  /*   display: inline-block; */
+    height: 100vh;
     width: 45%;
-    right:5%;  
-    margin-top: 6rem;
-    position: absolute;
+    min-width: 380px;
+    top:10%;
+    right:5%; 
+    /* margin-top: 2%; */
+    /* position: absolute; */
+   float:left; 
+   /*  margin-top:150px; */
     background-repeat: no-repeat;
-    background-size: 100%;
+    background-size: 60%;
     background-position: center;
     background-image: url(./assets/Retrado_sinfondo2.png);
-    animation: titulo 40s linear;
+    animation: titulo 30s linear;
     animation-fill-mode: backwards;
 }
 @keyframes titulo {
@@ -154,68 +171,123 @@ section#portada .image-portada-wrapper{
   }
 
 /* Secciones*/
-section.secciones{
+/* section {
     position: relative;
-    /* height: 100vh; */
-}
-section.secciones h2{
-    position: relative;
-    padding: 3rem;    
+   height: 100vh; 
+*/ 
+
+section h2{
+    /* position: relative; */
+    padding-top: 3rem;
+    padding-bottom: 2rem;    
     font-size: 5rem;
     text-align: center;
 }
-section.secciones p{
+section p{
     padding: 1rem 2rem;
     font-size: 1.1rem;
     text-align: justify;
     line-height: 1.4;
 }
 /* Sección sobre mi */
-section#sobre-mi .sobre-mi-wrapper{
-    
-    display: inline-block;
-    width: 60%;
-    min-width:400px;
-    right:0%;
-}
-section#sobre-mi .imagen {
-    
-    width: 35%;   
+/* section#sobre-mi article{
+    position: relative;
+    height: 80vh;
+} */
+
+section#sobre-mi .sobre-mi-imagen {
+    width: 35%;
+    min-width: 380px;   
     float: left;
 }
-img{
-    width:100%;
+section#sobre-mi .text-sobre-mi-wrapper{
+    display: inline-block;
+    margin-bottom: 3rem;
+    /* float:left; */
+    width: 60%;
+    /* height: 80vh; */
+    min-width:380px;
+    /* right:0%; */
 }
 
+
+
 /* Sección Formación */
-section#formacion a{
-    display: inline-block;
-    position: relative;
-    left:10%;
-}
-section#formacion p:nth-of-type(3){
+
+section#formacion p:nth-of-type(4){
     background-color: grey;
     border-radius: 5px;
     margin: 0.5rem;
 }
-.img-linkedin{
-     background-repeat: no-repeat;
+section#formacion .lenguajes{
+    position: relative;
+   text-align: center;
+   font-size: 1.4rem;   
+   color:white; 
+}
+
+section#formacion li{
+    margin:.8rem;
+    list-style: none;
+}
+section#formacion li::before {
+    content: "•"; 
+    padding-right: 8px;
+    color:rgb(247, 126, 13); 
+    font-size: 1.5rem;
+}
+
+/* Experiencia */
+.fa-linkedin{
+    color: rgb(22, 22, 165);
+}
+section#experiencia a{
+    position: relative;
+    left:50%;
+}
+/* .img-linkedin{    
+    position: relative;
+    left:40%;
+    background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     height: 150px;
     width: 150px;
     background-image: url(./assets/linkdin.png);
-}
-section#formacion .lenguajes{
-   text-align: center;
-   font-size: 1.4rem;   
-   color:white; 
-}
-/* Sección Contactar */
+} */
+
+
+/* Sección Contacto */
 form{
     display:grid;
+    grid-template-columns: 1fr;
+    justify-items: center;
 
 }
-input{
-    width:100%;
+section#contacto input, section#contacto textarea,
+section#contacto button {
+    padding: 0.8rem;
+    margin:0.6rem;
+    letter-spacing: normal; 
+    border: 0px solid; 
+    border-bottom: 1px solid rgb(199, 189, 189);
+    width: 50%;
+    min-width: 380px;
+    font-family: 'PT Mono', monospace;   
+    font-size: 1.5rem;    
+}
+section#contacto button{
+    border: 0px solid; 
+}
+
+section#contacto textarea{
+    height: 8rem;
+    font-size:1.1rem;
+}
+
+/* Footer */
+footer p{
+    margin-top: 3rem;
+    text-align: center;
+    font-family: 'PT Mono', monospace;  
 }

@@ -16,9 +16,9 @@ a{
     color: inherit;
 }
 
-/* img {
+img {
     width: 100%;
-} */
+}
 
 blockquote{
     quotes: '\00AB' '\00BB' '\201E' '\201C';
@@ -31,6 +31,10 @@ blockquote::after{
 }
 span.resaltar-texto{
     text-emphasis: bolder;
+    color:rgb(247, 126, 13);
+    font-size: 1.2rem;
+}
+span.autor{
     color:black;
     font-size: 1.2rem;
 }
