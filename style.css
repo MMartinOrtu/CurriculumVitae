@@ -1,6 +1,8 @@
 :root{
     --color-logo: #5c5d61fd;
-    --color-secundario: rgb(247, 126, 13);
+    --color-naranja: rgb(247, 126, 13);
+    --color-azul:rgb(24, 129, 199);
+    --color-blanco: rgb(252, 248, 248);
 }
 html{    
     scroll-behavior: smooth;
@@ -10,6 +12,9 @@ body{
 }
 
 /* Header y nav */
+.menu-top-hidden{
+    display: none;
+}
 
 .header-nav-wrapper{
  position:fixed;
@@ -17,7 +22,7 @@ body{
   z-index:1;               
 } 
 .header-nav-wrapper header{
-     float:left;
+    float:left;
     z-index:1;
     margin-top: 1.5rem;
     margin-left: 1.5rem;   
@@ -38,11 +43,11 @@ nav a {
     text-transform: uppercase;
     font-size: 1.1rem;
     transition: all 0.2s linear;
-    color: rgb(128, 126, 126); 
+    color: var(--color-azul); 
 }
 nav a:hover {
-    color: var(--color-secundario);
-    border-bottom: 3px solid var(--color-secundario); 
+    color: var(--color-naranja);
+    border-bottom: 3px solid var(--color-naranja); 
 }
 
 /* Icono-Header */
@@ -68,8 +73,8 @@ nav a:hover {
  .border-logo:hover {
     opacity: .9;
     transform: rotate(360deg);
-    background-color: var(--color-secundario); 
-    border: 4px solid var(--color-secundario);
+    background-color: var(--color-naranja); 
+    border: 4px solid var(--color-naranja);
   }
   .border-logo:hover .text-logo {
     color: white;
@@ -84,10 +89,10 @@ section#portada header{
 section#portada h1{
     float:left;
     width:55%;
-    min-width: 350px;    
+    min-width: 320px;    
     padding-top:15%;
     text-align: center;
-    font-size: 4.5rem;
+    font-size: 4rem;
     line-height: 1.4;
     color: var(--color-logo);
 }
@@ -97,13 +102,13 @@ section#portada .hola{
 }
 section#portada .nombre{
     color: white;
-    background-color:var(--color-logo);
+    background-color:var(--color-naranja);
     padding: .8rem;    
 }
 section#portada .image-portada-wrapper{
     height: 100vh;
     width: 40%;
-    min-width: 380px;
+    min-width: 320px;
     /* top:10%;
     right:5%; */     
     float:left; 
@@ -149,7 +154,11 @@ section#portada .image-portada-wrapper{
       transform: scale(1);     
     }
   }
-
+.line{
+    height: 100px;
+    width: 100%;
+    border-bottom: 0px solid white;
+}
 /* Secciones*/
 
 section h2{
@@ -157,6 +166,7 @@ section h2{
     padding-bottom: 2rem;    
     font-size: 5rem;
     text-align: center;
+    color:var(--color-azul);
     clear:both;
 }
 section p{
@@ -168,37 +178,35 @@ section p{
 
 /* Sección sobre mi */
 
-
 section#sobre-mi .sobre-mi-imagen {
     width: 35%;
-    min-width: 380px;   
+    min-width: 320px;   
     float: left;
 }
 section#sobre-mi .text-sobre-mi-wrapper{
     display: inline-block;
     margin-bottom: 3rem;    
     width: 60%;   
-    min-width:380px;
+    min-width:320px;   
 }
-
 
 
 /* Sección Formación */
 
 section#formacion p:nth-of-type(4){
-    background-color: rgb(55, 157, 224);
+    background-color: var(--color-azul);
     border-radius: 5px;
     width: 80%;
-    min-width: 380px;
+    min-width: 280px;
     margin: 0.5rem auto;
 }
 section#formacion .lenguajes{
     position: relative;
     text-align: center;
+    min-width: 280px;
     font-size: 1.4rem;   
     color:white; 
 }
-
 section#formacion li{
     margin:.8rem;
     list-style: none;
@@ -206,7 +214,7 @@ section#formacion li{
 section#formacion li::before {
     content: "•"; 
     padding-right: 8px;
-    color:var(--color-secundario); 
+    color:var(--color-naranja); 
     font-size: 1.5rem;
 }
 section#formacion .cv{
@@ -215,14 +223,14 @@ section#formacion .cv{
     color: rgb(55, 157, 224);
 }
 section#formacion .cv>a{
-    color:var(--color-secundario);
+    color:var(--color-naranja);
     font-size: 2.5rem;
 }
 
 /* Experiencia */
 
 .fa-linkedin{
-    color: rgb(22, 22, 165);
+    color: var(--color-azul);
 }
 section#experiencia article{
     text-align: center;
@@ -246,7 +254,6 @@ form{
     display:grid;
     grid-template-columns: 1fr;
     justify-items: center;
-
 }
 section#contacto input, section#contacto textarea,
 section#contacto button {
@@ -254,14 +261,16 @@ section#contacto button {
     margin:0.6rem;
     letter-spacing: normal; 
     border: 0px solid; 
-    border-bottom: 1px solid rgb(199, 189, 189);
+    border-bottom: 1px solid var(--color-blanco);
     width: 50%;
-    min-width: 350px;
+    min-width: 320px;
     font-family: 'PT Mono', monospace;   
     font-size: 1.5rem;    
 }
 section#contacto button{
     border: 0px solid; 
+    background-color: var(--color-azul);
+    color: var(--color-blanco);
 }
 section#contacto textarea{
     height: 8rem;
@@ -273,11 +282,12 @@ footer p{
     margin-top: 3rem;
     text-align: center;
     font-family: 'PT Mono', monospace;  
+    color: var(--color-logo);
 }
 .fa-bars{
     display:none;
 }
-@media screen and (max-width: 767px){
+@media screen and (max-width: 762px){
     .menu-top{
         display:none;
     }
@@ -285,14 +295,51 @@ footer p{
         display: initial;
         float:right;   
         z-index:1;   
-        margin-top: 2rem;
-        margin-right: 15%;   
+        margin-top: .5rem;
+        margin-right: 6%; 
+        color: var(--color-blanco);  
     }
+    .header-nav-wrapper{
+        background-color: var(--color-azul);              
+    } 
+    .header-nav-wrapper header{
+    margin-top: .4rem;
+    margin-left: 6%;   
+   }
     .border-logo{    
-        width: 3.5rem;
-        height: 3.5rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 4px solid var(--color-blanco);
     }
+    .border-logo .text-logo{
+        font-size: 1rem;
+        color: var(--color-blanco);
+        /* color: var(--color-logo); */
+     }
+
+    .menu-top-hidden{
+        display: initial;
+        position: absolute;
+        right: 0;              
+        z-index:2;   
+        background-color: rgba(24, 129, 199, 0.671);  
+    }
+   .menu-top-hidden>ul li{
+        display:block;
+        padding: 1rem;
+    }
+    .menu-top-hidden a {
+        display: block;
+        font-weight: bolder;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+        text-emphasis: center;
+        transition: all 0.2s linear;
+        color: var(--color-blanco); 
+    }
+     
     section#portada h1{
+        width:100%;
         font-size: 3.8rem;
     } 
     section#portada .hola{
@@ -300,19 +347,73 @@ footer p{
         color:var(--color-logo);
     }
     section#portada .image-portada-wrapper{
-        height: 60vh;
-         background-position-x: 50%;
-
+        width:95%;
+        height: 400px;
+        background-size: 30%;
+        background-position-x: 50%;
     }
+
+    section#sobre-mi header{
+       clear: both;
+    }
+    section#sobre-mi .sobre-mi-imagen {
+        width: 80%;
+        margin-left: 10%;
+      /*   min-width: 320px;   
+        float: left; */
+    }
+    section#sobre-mi .text-sobre-mi-wrapper{      
+        width: 100%;          
+    } 
+    
     section h2{
-        padding-top: 1rem;
+        padding-top: 3rem;
         padding-bottom: 1rem;    
         font-size: 3rem;
     }
     section p{
-        padding: 0.3rem 1rem;
-        font-size: 1rem;
+        padding: 0.3rem 0.8rem;
+        font-size: 1.1rem;
         text-align: justify;
-        line-height: 1.2;
+        line-height: 1.1;
     }
+    section#formacion li{
+        margin:.6rem;
+    }
+    section#formacion ul{
+       padding-left: 0.3rem;
+    }
+    span.resaltar-texto{
+       font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 480px){
+    section#portada header{
+        height: 60vh;        
+    }
+    section#portada .image-portada-wrapper{
+        width:100%;
+        height: 200px;
+        background-size: 25%;
+        background-position-x: 50%;
+        
+    }
+    section#portada h1{
+        width:100%;
+        font-size: 3.5rem;
+    } 
+    section#portada .hola{
+        font-size:4rem;
+        color:var(--color-logo);
+    }
+    .line{
+        height: 200px;
+        width: 100%;
+        border-bottom: 0px solid white;
+    }
+    section#sobre-mi .sobre-mi-imagen {
+        width: 100%;
+        margin-left: 0;
+    }
+
 }
