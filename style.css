@@ -12,9 +12,7 @@ body{
 }
 
 /* Header y nav */
-.menu-top-hidden{
-    display: none;
-}
+
 
 .header-nav-wrapper{
  position:fixed;
@@ -238,7 +236,7 @@ section#experiencia .experiencia-imagen{
     margin: .8rem;
     float: left;
     width: 35%;
-    min-width: 350px;
+    min-width: 320px;
 }
 section#experiencia p:nth-of-type(4){
     display:inline-block;   
@@ -283,7 +281,7 @@ footer p{
 .fa-bars{
     display:none;
 }
-@media screen and (max-width: 762px){
+@media screen and (max-width: 820px){
     .menu-top{
         display:none;
     }
@@ -313,23 +311,31 @@ footer p{
         /* color: var(--color-logo); */
      }
 
-    .menu-top-hidden{
-        display: initial;
+    nav.hidden{
+        display:initial;       
         position: absolute;
+        height: 100vh;
+        width: 100vw;
         right: 0;              
         z-index:2;   
-        background-color: rgba(24, 129, 199, 0.671);  
+        background-color: rgba(24, 129, 199, 0.808); 
+        margin-top: 0;
+        margin-top: 3rem;
+        margin-right: 0;
+        text-align: center;
+       /*  padding-right:.5rem;  */
     }
-   .menu-top-hidden>ul li{
+   nav.hidden>ul li{
         display:block;
-        padding: 1rem;
+        padding: 1rem;        
     }
-    .menu-top-hidden a {
+    nav.hidden a {
         display: block;
+        width: 60%;
+        margin: 0 auto;
         font-weight: bolder;
         text-transform: uppercase;
-        font-size: 1.2rem;
-        text-emphasis: center;
+        font-size: 2rem;             
         transition: all 0.2s linear;
         color: var(--color-blanco); 
     }
@@ -344,19 +350,23 @@ footer p{
     }
     section#portada .image-portada-wrapper{
         width:95%;
-        height: 400px;
-        background-size: 30%;
-        background-position-x: 50%;
+        height: 80vh;
+        background-size: 40%;
+        /* background-position-x: 50%; */
     }
 
     section#sobre-mi header{
        clear: both;
     }
+    .line{
+        height: 320px;
+        width: 100%;
+        border-bottom: 0px solid white;
+    }
     section#sobre-mi .sobre-mi-imagen {
-        width: 80%;
-        margin-left: 10%;
-      /*   min-width: 320px;   
-        float: left; */
+       width:100%;    
+       background-size: cover;
+      
     }
     section#sobre-mi .text-sobre-mi-wrapper{      
         width: 100%;          
@@ -382,6 +392,14 @@ footer p{
     span.resaltar-texto{
        font-size: 1.1rem;
     }
+    section#experiencia .experiencia-imagen{
+        width: 95%;
+        
+    }
+    section#contacto input, section#contacto textarea,
+    section#contacto button{
+    font-size: 1.1rem;
+    }
 }
 @media screen and (max-width: 480px){
     section#portada header{
@@ -389,10 +407,10 @@ footer p{
     }
     section#portada .image-portada-wrapper{
         width:85%;
-        height: 150px;
-        background-size: 30%;
-        background-position-x: 50%;
-        
+        height: 20rem;
+        margin-top: 2rem;
+        background-size: 60%;
+        background-position-x: 60%;        
     }
     section#portada h1{
         width:100%;
@@ -403,13 +421,17 @@ footer p{
         color:var(--color-logo);
     }
     .line{
-        height: 100px;
+        height: 320px;
         width: 100%;
         border-bottom: 0px solid white;
     }
     section#sobre-mi .sobre-mi-imagen {
         width: 100%;
         margin-left: 0;
+    }
+    section#contacto input, section#contacto textarea,
+    section#contacto button{
+    font-size: 1.1rem;
     }
 
 }
