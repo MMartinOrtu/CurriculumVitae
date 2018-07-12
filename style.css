@@ -85,7 +85,7 @@ section#portada h1{
     float:left;
     width:55%;
     min-width: 350px;    
-    padding-top:140px;
+    padding-top:15%;
     text-align: center;
     font-size: 4.5rem;
     line-height: 1.4;
@@ -176,10 +176,8 @@ section#sobre-mi .sobre-mi-imagen {
 }
 section#sobre-mi .text-sobre-mi-wrapper{
     display: inline-block;
-    margin-bottom: 3rem;
-    
-    width: 60%;
-   
+    margin-bottom: 3rem;    
+    width: 60%;   
     min-width:380px;
 }
 
@@ -222,6 +220,7 @@ section#formacion .cv>a{
 }
 
 /* Experiencia */
+
 .fa-linkedin{
     color: rgb(22, 22, 165);
 }
@@ -237,13 +236,12 @@ section#experiencia .experiencia-imagen{
     width: 35%;
     min-width: 350px;
 }
-
 section#experiencia p:nth-of-type(4){
     display:inline-block;   
 }
 
-
 /* Sección Contacto */
+
 form{
     display:grid;
     grid-template-columns: 1fr;
@@ -258,14 +256,13 @@ section#contacto button {
     border: 0px solid; 
     border-bottom: 1px solid rgb(199, 189, 189);
     width: 50%;
-    min-width: 380px;
+    min-width: 350px;
     font-family: 'PT Mono', monospace;   
     font-size: 1.5rem;    
 }
 section#contacto button{
     border: 0px solid; 
 }
-
 section#contacto textarea{
     height: 8rem;
     font-size:1.1rem;
@@ -276,4 +273,46 @@ footer p{
     margin-top: 3rem;
     text-align: center;
     font-family: 'PT Mono', monospace;  
+}
+.fa-bars{
+    display:none;
+}
+@media screen and (max-width: 767px){
+    .menu-top{
+        display:none;
+    }
+    .fa-bars{
+        display: initial;
+        float:right;   
+        z-index:1;   
+        margin-top: 2rem;
+        margin-right: 15%;   
+    }
+    .border-logo{    
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+    section#portada h1{
+        font-size: 3.8rem;
+    } 
+    section#portada .hola{
+        font-size:5rem;
+        color:var(--color-logo);
+    }
+    section#portada .image-portada-wrapper{
+        height: 60vh;
+         background-position-x: 50%;
+
+    }
+    section h2{
+        padding-top: 1rem;
+        padding-bottom: 1rem;    
+        font-size: 3rem;
+    }
+    section p{
+        padding: 0.3rem 1rem;
+        font-size: 1rem;
+        text-align: justify;
+        line-height: 1.2;
+    }
 }

@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
     <meta name="author" content="Miguel Martín">
     <meta name="description" content="Portfolio de Miguel Martín">
     <link rel="shortcut icon" href="./assets/favicon.ico" type="image/x-icon">
@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
     <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" href="./style.css">
-    
+    <script src="./js/app.js" type="module"></script>    
 </head>
 <body>
     <div class="header-nav-wrapper">
@@ -20,7 +20,8 @@
                 <span class="text-logo">mm</span>
             </a>              
         </header>
-        <nav>
+        <a class="fas fa-bars fa-3x"></a>
+        <nav class="menu-top">
             <ul>
                 <li><a href="#sobre-mi">Sobre mi</a></li>
                 <li><a href="#formacion">Formación</a></li>
@@ -112,14 +113,14 @@
        
          
     </section> 
-<section id="contacto">
+    <section id="contacto">
         <header>
             <h2>Contacto</h2>
         </header>
-        <form action="">
-            <input type="text" name="name" id="name" placeholder="Name" required>
-            <input type="email" name="email" id="email" placeholder="Email Address">
-            <input type="tel" name="phone" id="phone" placeholder="Phone Number">
+        <form action="" id="contacto">
+            <input type="text" name="name" id="name" autocomplete='name'  placeholder="Name" required>
+            <input type="email" name="email" id="email" autocomplete='email' placeholder="Email Address">
+            <input type="tel" name="phone" id="phone" autocomplete='tel-national' placeholder="Phone Number">
             <input name="listado" id="listado" list="opciones"placeholder="¿Cómo me has conocido?"/>
             <input type="text" name="opcion-otros" id="opcion-otros" placeholder="Escribe aquí cómo me conociste" hidden="true">
             <datalist id="opciones">
@@ -132,7 +133,7 @@
         </form>
     </section>
     <footer>
-        <p><small>Web creada por Miguel Martín 2018</small></p>
+    <p><small>Web creada por Miguel Martín 2018</small></p>
     </footer>
 </body>
 </html>
