@@ -366,7 +366,7 @@ footer p{
         width:95%;
         height: 85vh;
         background-size: 50%;
-        /* background-position-x: 50%; */
+        
     }
 
     section#sobre-mi header{
@@ -415,8 +415,7 @@ footer p{
     section#contacto button{
     font-size: 1.1rem;
     }
-
-
+}
 @media screen and (max-width: 480px){
     section#portada header{
         height: 60vh;        
@@ -458,3 +457,4 @@ footer p{
         background-size: 30%;
         background-position-x: 60%;        
     }
+}

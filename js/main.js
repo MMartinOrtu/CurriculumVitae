@@ -5,24 +5,36 @@ export class Main{
         //Elementos del DOM
         this.iconoMenu = document.querySelector('.fa-bars');
         this.itemMenu = document.querySelector('#lista-menu');
-        this.formContact = document.querySelector('#contacto');
         this.menu = document.querySelectorAll('nav.menu-top a');
         this.secciones = document.querySelectorAll('.secciones');
         
-        this.offsets = [];
-        this.prepararNavegacion();
-
+        //Elementos del DOM del formulario
+        this.formContact = document.querySelector('#form-contacto');
         this.opciones= document.querySelector('#listado');
         this.otros= document.querySelector('#otros');
-     
+        this.textArea= document.querySelector('#message');
+
+        //Array para guardar los offsetTop del formulario
+        this.offsets = [];
+        //Función que se utiliza para clacular los offsetTop de las secciones
+        this.prepararNavegacion();
     }
 
     defineEventListener(){
+        //Evento que maneja el envío del formulario
         this.formContact.addEventListener('submit', this.readContact);
+
+        //Evento para quitar y poner el menú de navegación oculto
         this.iconoMenu.addEventListener('click', this.addMenu);
-       /*  this.iconoMenu.addEventListener('touch', this.addMenu); */
         this.itemMenu.addEventListener('click', this.removeMenu);
+
+        //Evento para hacer aparecer un campo de texto al marcar la opción "otros" del formulario
         this.opciones.addEventListener('change', this.selectOption.bind(this));
+
+        //Evento que valida el número de palabras del campo textArea del formulario
+        this.textArea.addEventListener('change', this.comprobarLongitudTextArea.bind(this))
+
+        //Evento para cambiar la apariencia del menú de navegación con el scroll
         window.addEventListener('scroll', this.changeMenuStyle.bind(this));
 
     }
@@ -72,10 +84,39 @@ export class Main{
 
     }
     selectOption(e){
-        console.log(this.otros)
+        console.dir(this.otros)
         if(e.target.value=="Otros"){
             this.otros.classList.remove('input-hidden')
         }
     }
 
+    comprobarLongitudTextArea(e){
+        let cadenaTextArea = e.target.value;          
+        let totalPalabras = this.contarPalabras(cadenaTextArea);
+        let palabrasSobrantes= totalPalabras - 150;
+        if (totalPalabras > 150){
+            /* this.textArea.validity.customError */
+            this.textArea.setCustomValidity(`Este campo tiene${ totalPalabras} palabras y no puede contener más de 150, debes quitar, al menos, ${palabrasSobrantes} palabras`);               
+        }else{
+            this.textArea.setCustomValidity('');
+        }     
+    }
+
+    contarPalabras(cadena){
+        //Expresiones regulares para quitar espacios y signos de puntuación a la cadena de texto
+        let signos = /[.,\/#!$%\^&\*;:{}=\-_`~()”“"…]/g;
+        let primerBlanco = /^ /;
+        let ultimoBlanco = / $/;
+        let variosBlanco = /[ ]+/g;
+        //Operaciones sobre la cadena de texto        
+        var cadena = cadena.replace(signos, "");
+        var cadena = cadena.replace(variosBlanco, " ");
+        var cadena = cadena.replace(primerBlanco, "");
+        var cadena = cadena.replace(ultimoBlanco, "");
+        //Convierto la cadena texto sin signos de puntuación y espacios de más en un array
+        let textoTroceado = cadena.split(" ");
+       //Cuento el número de elementos del array que será el número de palabras de la cadena
+        let numeroPalabras = textoTroceado.length;
+        return numeroPalabras; 
+    }
 }

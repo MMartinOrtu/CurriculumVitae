@@ -1,6 +1,7 @@
 export class Form {
     constructor(){
         //Elemento del DOM del formulario
+        this.formContact = document.querySelector('#form-contacto');
         this.name= document.querySelector('#name');
         this.email= document.querySelector('#email');
         this.phone= document.querySelector('#phone');
@@ -22,7 +23,8 @@ export class Form {
     }
    
     guardarDatos(){
-        console.log('guardando datos')
+        console.log('guardando datos')        
     }
 
 }
+

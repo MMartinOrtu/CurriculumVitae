@@ -16,7 +16,7 @@
 <body>
     <div class="header-nav-wrapper">
         <header>                    
-            <a class="border-logo" href="./index.html">
+            <a class="border-logo" href="#portada">
                 <span class="text-logo">mm</span>
             </a>              
         </header>
@@ -117,10 +117,10 @@
         <header>
             <h2>Contacto</h2>
         </header>
-        <form action="" id="contacto">
+        <form action="" id="form-contacto">
             <input type="text" name="name" id="name" autocomplete='name'  placeholder="Name" required>
-            <input type="email" name="email" id="email" autocomplete='email' placeholder="Email Address">
-            <input type="tel" name="phone" id="phone" autocomplete='tel-national' placeholder="Phone Number">
+            <input type="email" name="email" id="email" autocomplete='email' placeholder="Email Address" pattern="^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$" title="Debe introducir un formato d email adecuado">
+            <input type="tel" name="phone" id="phone" autocomplete='tel-national' placeholder="Phone Number" pattern="^(\+34|0034|34)?[6|7|9][0-9]{8}$" title="Debes introducir un número de teléfono correcto">
             <input name="listado" id="listado" list="opciones"placeholder="¿Cómo me has conocido?"/>
             <input class="input-hidden" type="text" name="opcion-otros" id="otros" placeholder="Escribe aquí cómo me conociste">
             <datalist id="opciones">
@@ -128,7 +128,7 @@
                 <option value="Amigos">Amigos</option>
                 <option value="Otros">Otros</option>
             </datalist>
-            <textarea name="message" id="message" cols="30" rows="10" placeholder="Escribe el mensaje que desees (no más de 150 palabras)"></textarea><br>
+            <textarea name="message" id="message" placeholder="Escribe el mensaje que desees (no más de 150 palabras)"></textarea><br>
             <button type="submit" id="btnForm">Enviar</button>
         </form>
     </section>
