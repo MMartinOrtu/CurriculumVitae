@@ -13,11 +13,11 @@ body{
 
 /* Header y nav */
 
-
 .header-nav-wrapper{
  position:fixed;
  width: 100vw;
-  z-index:1;               
+ z-index:1; 
+background-color: rgba(255, 255, 255, 0.856);              
 } 
 .header-nav-wrapper header{
     float:left;
@@ -100,7 +100,7 @@ section#portada h1{
 }
 section#portada .hola{
     font-size:7rem;
-    color:var(--color-logo);
+    color:var(--color-naranja);
 }
 section#portada .nombre{
     color: white;
@@ -118,7 +118,7 @@ section#portada .image-portada-wrapper{
     background-size: 60%;
     background-position: center;
     background-image: url(./assets/Retrado_sinfondo2.png);
-    animation: titulo 30s linear;
+    animation: titulo 20s linear;
     animation-fill-mode: backwards;
 }
 @keyframes titulo {
@@ -160,7 +160,7 @@ section#portada .image-portada-wrapper{
 /* Secciones*/
 
 section h2{
-    padding-top: 3rem;
+    padding-top: 5rem;
     padding-bottom: 2rem;    
     font-size: 5rem;
     text-align: center;
@@ -360,7 +360,7 @@ footer p{
     } 
     section#portada .hola{
         font-size:5rem;
-        color:var(--color-logo);
+        color:var(--color-naranja);
     }
     section#portada .image-portada-wrapper{
         width:95%;
@@ -433,7 +433,7 @@ footer p{
     } 
     section#portada .hola{
         font-size:4rem;
-        color:var(--color-logo);
+        color:var(--color-naranja);
     }
     .line{
         height: 320px;
