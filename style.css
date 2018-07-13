@@ -43,7 +43,11 @@ nav a {
     transition: all 0.2s linear;
     color: var(--color-azul); 
 }
-nav a:hover {
+nav a:hover, .active {
+    color: var(--color-naranja);
+    border-bottom: 3px solid var(--color-naranja); 
+}
+.active {
     color: var(--color-naranja);
     border-bottom: 3px solid var(--color-naranja); 
 }
@@ -204,6 +208,9 @@ section#formacion .lenguajes{
 section#formacion li{
     margin:.8rem;
     list-style: none;
+    font-size: 1.1rem;
+    text-align: justify;
+    line-height: 1.4;
 }
 section#formacion li::before {
     content: "•"; 
@@ -269,7 +276,17 @@ section#contacto button{
 section#contacto textarea{
     height: 8rem;
     font-size:1.1rem;
+    padding: 0.2rem;
 }
+
+.input-hidden{
+    display:none;
+}
+
+input#otros{
+    background-color: rgba(166, 213, 231, 0.877);
+}
+
 
 /* Footer */
 footer p{
@@ -299,7 +316,7 @@ footer p{
     .header-nav-wrapper header{
     margin-top: .4rem;
     margin-left: 6%;   
-   }
+    }
     .border-logo{    
         width: 2.5rem;
         height: 2.5rem;
@@ -307,10 +324,8 @@ footer p{
     }
     .border-logo .text-logo{
         font-size: 1rem;
-        color: var(--color-blanco);
-        /* color: var(--color-logo); */
-     }
-
+        color: var(--color-blanco);       
+    }
     nav.hidden{
         display:initial;       
         position: absolute;
@@ -322,8 +337,7 @@ footer p{
         margin-top: 0;
         margin-top: 3rem;
         margin-right: 0;
-        text-align: center;
-       /*  padding-right:.5rem;  */
+        text-align: center;       
     }
    nav.hidden>ul li{
         display:block;
@@ -350,8 +364,8 @@ footer p{
     }
     section#portada .image-portada-wrapper{
         width:95%;
-        height: 80vh;
-        background-size: 40%;
+        height: 85vh;
+        background-size: 50%;
         /* background-position-x: 50%; */
     }
 
@@ -378,13 +392,14 @@ footer p{
         font-size: 3rem;
     }
     section p{
-        padding: 0.3rem 0.8rem;
+        padding: 0.5rem 0.8rem;
         font-size: 1.1rem;
         text-align: justify;
-        line-height: 1.1;
+        line-height: 1.4;
     }
     section#formacion li{
         margin:.6rem;
+        font-size: 1.1rem;
     }
     section#formacion ul{
        padding-left: 0.3rem;
@@ -400,14 +415,15 @@ footer p{
     section#contacto button{
     font-size: 1.1rem;
     }
-}
+
+
 @media screen and (max-width: 480px){
     section#portada header{
         height: 60vh;        
     }
     section#portada .image-portada-wrapper{
         width:85%;
-        height: 20rem;
+        height: 22rem;
         margin-top: 2rem;
         background-size: 60%;
         background-position-x: 60%;        
@@ -433,5 +449,12 @@ footer p{
     section#contacto button{
     font-size: 1.1rem;
     }
-
 }
+@media screen and (max-height: 400px){
+    section#portada .image-portada-wrapper{
+        width:95%;
+        height: 14rem;
+        margin-top: 2rem;
+        background-size: 30%;
+        background-position-x: 60%;        
+    }
