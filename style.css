@@ -10,9 +10,9 @@ html{
 body{
     font-family: 'PT Mono', monospace;
 }
-*{
+/* *{
     border: 1px solid red;
-}
+} */
 
 /* Header y nav */
 
@@ -463,9 +463,9 @@ footer p{
     } */
     section#portada .image-portada-wrapper{
         width:85%;
-        height: 22rem;
+        height: 15rem;
         /* margin-top: 2rem; */
-        background-size: 60%;
+        background-size: 50%;
         background-position-x: 50%;        
     }
     section#portada h1{
