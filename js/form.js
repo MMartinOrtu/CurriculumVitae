@@ -5,26 +5,33 @@ export class Form {
         this.name= document.querySelector('#name');
         this.email= document.querySelector('#email');
         this.phone= document.querySelector('#phone');
-        this.opciones= document.querySelectorAll('#opciones');
-        this.otros= document.querySelector('#opcion-otros');
-        this.message= document.querySelector('#message');
-        this.btnForm= document.querySelector('btnForm');
+        this.conocido= document.querySelector('#listado');
+        this.otros= document.querySelector('#otros');
+        this.textArea= document.querySelector('#message');
         
         this.datosForm ={
             name: '',
             email:'',
             phone:'',
-            conocido: '',
+            conocidoPor: '',
             otros:'',
-            message:''
-        }
-        
+            message:''        
+          }   
        
     }
    
+
     guardarDatos(){
-        console.log('guardando datos')        
+        console.log('guardando datos')
+        this.datosForm ={
+            name: this.name.value,
+            email:this.email.value,
+            phone:this.phone.value,
+            conocidoPor: this.conocido.value,
+            otros: this.otros.value,
+            message:this.textArea.value
+            
+        }  
+        console.dir(this.datosForm)
     }
-
 }
-

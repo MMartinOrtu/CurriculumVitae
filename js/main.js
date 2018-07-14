@@ -10,7 +10,7 @@ export class Main{
         
         //Elementos del DOM del formulario
         this.formContact = document.querySelector('#form-contacto');
-        this.opciones= document.querySelector('#listado');
+        this.conocido= document.querySelector('#listado');
         this.otros= document.querySelector('#otros');
         this.textArea= document.querySelector('#message');
 
@@ -22,14 +22,14 @@ export class Main{
 
     defineEventListener(){
         //Evento que maneja el envío del formulario
-        this.formContact.addEventListener('submit', this.readContact);
+        this.formContact.addEventListener('submit', this.readContact.bind(this));
 
         //Evento para quitar y poner el menú de navegación oculto
         this.iconoMenu.addEventListener('click', this.addMenu);
         this.itemMenu.addEventListener('click', this.removeMenu);
 
         //Evento para hacer aparecer un campo de texto al marcar la opción "otros" del formulario
-        this.opciones.addEventListener('change', this.selectOption.bind(this));
+        this.conocido.addEventListener('change', this.selectOption.bind(this));
 
         //Evento que valida el número de palabras del campo textArea del formulario
         this.textArea.addEventListener('change', this.comprobarLongitudTextArea.bind(this))
@@ -78,24 +78,29 @@ export class Main{
     }
 
     readContact(e){
-        e.preventDefault();
+        e.preventDefault(); 
         let form = new Form();
-        form.guardarDatos();
+     
+        if (this.formContact.checkValidity()){ 
+        form.guardarDatos();}
+       
+               
 
     }
     selectOption(e){
         console.dir(this.otros)
+        console.dir(this.conocido)
         if(e.target.value=="Otros"){
             this.otros.classList.remove('input-hidden')
         }
     }
 
-    comprobarLongitudTextArea(e){
+   comprobarLongitudTextArea(e){
         let cadenaTextArea = e.target.value;          
         let totalPalabras = this.contarPalabras(cadenaTextArea);
         let palabrasSobrantes= totalPalabras - 150;
+        console.log(totalPalabras)
         if (totalPalabras > 150){
-            /* this.textArea.validity.customError */
             this.textArea.setCustomValidity(`Este campo tiene${ totalPalabras} palabras y no puede contener más de 150, debes quitar, al menos, ${palabrasSobrantes} palabras`);               
         }else{
             this.textArea.setCustomValidity('');

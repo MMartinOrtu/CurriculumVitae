@@ -84,8 +84,44 @@ nav a:hover, .active {
   }
     
 /* Section portada */
-
 section#portada header{
+    padding: 5rem 0; 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-items: center;     
+   
+}
+section#portada h1{
+    min-width: 320px; 
+    padding-top: 3.5rem;
+    padding-bottom:6rem;
+    text-align: center;
+    font-size: 4rem;
+    line-height: 1.4;
+    color: var(--color-logo);
+}
+section#portada .hola{
+    font-size:7rem;
+    color:var(--color-naranja);
+}
+section#portada .nombre{
+    color: white;
+    background-color:var(--color-naranja);
+    padding: .8rem;    
+}
+section#portada .image-portada-wrapper{
+   /* margin-top: 2rem; */
+    min-width: 420px;     
+    background-repeat: no-repeat;
+    background-size: 70%;
+    background-position:bottom;
+    /* background-position-y: 1rem; */
+    background-image: url(./assets/Retrado_sinfondo2.png);
+    animation: titulo 20s linear;
+    animation-fill-mode: backwards;
+}
+
+/* section#portada header{
     height: 100vh;        
 }
 section#portada h1{
@@ -110,9 +146,7 @@ section#portada .nombre{
 section#portada .image-portada-wrapper{
     height: 100vh;
     width: 40%;
-    min-width: 320px;
-    /* top:10%;
-    right:5%; */     
+    min-width: 320px; 
     float:left; 
     background-repeat: no-repeat;
     background-size: 60%;
@@ -120,7 +154,7 @@ section#portada .image-portada-wrapper{
     background-image: url(./assets/Retrado_sinfondo2.png);
     animation: titulo 20s linear;
     animation-fill-mode: backwards;
-}
+} */
 @keyframes titulo {
     0% {
     transform:  scale(1);
@@ -277,6 +311,7 @@ section#contacto textarea{
     height: 8rem;
     font-size:1.1rem;
     padding: 0.2rem;
+    margin-bottom:1rem;
 }
 
 .input-hidden{
@@ -353,19 +388,24 @@ footer p{
         transition: all 0.2s linear;
         color: var(--color-blanco); 
     }
+    section#portada header{
+        grid-template-columns: 1fr;
+        padding: 1rem 0;        
+    }
      
     section#portada h1{
         width:100%;
         font-size: 3.8rem;
+        padding-bottom: 0;
     } 
     section#portada .hola{
         font-size:5rem;
         color:var(--color-naranja);
     }
     section#portada .image-portada-wrapper{
-        width:95%;
-        height: 85vh;
-        background-size: 50%;
+       /*  width:95%; */
+        height: 50vh;
+        background-size: 45%;
         
     }
 
@@ -417,15 +457,15 @@ footer p{
     }
 }
 @media screen and (max-width: 480px){
-    section#portada header{
+  /*   section#portada header{
         height: 60vh;        
-    }
+    } */
     section#portada .image-portada-wrapper{
         width:85%;
         height: 22rem;
-        margin-top: 2rem;
+        /* margin-top: 2rem; */
         background-size: 60%;
-        background-position-x: 60%;        
+        background-position-x: 50%;        
     }
     section#portada h1{
         width:100%;
@@ -440,10 +480,12 @@ footer p{
         width: 100%;
         border-bottom: 0px solid white;
     }
-    section#sobre-mi .sobre-mi-imagen {
-        width: 100%;
-        margin-left: 0;
-    }
+    section#portada .image-portada-wrapper{
+        /*  width:95%; */
+         height: 50vh;
+         background-size: 45%;
+         
+     }
     section#contacto input, section#contacto textarea,
     section#contacto button{
     font-size: 1.1rem;
