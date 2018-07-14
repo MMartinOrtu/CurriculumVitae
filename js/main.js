@@ -39,8 +39,7 @@ export class Main{
 
     }
 
-    addMenu(){
-        
+    addMenu(){        
         document.querySelector('.menu-top').classList.add('hidden');
     }
     removeMenu(e){
@@ -48,7 +47,7 @@ export class Main{
         document.querySelector('.menu-top').classList.remove('hidden');
     }
 
-   changeMenuStyle(){       
+    changeMenuStyle(){       
      let pageOffset = window.pageYOffset;
      let menuItem = 0    
     
@@ -82,26 +81,23 @@ export class Main{
         let form = new Form();
      
         if (this.formContact.checkValidity()){ 
-        form.guardarDatos();}
-       
-               
-
+        form.guardarDatos();
+        }  
     }
+
     selectOption(e){
-        console.dir(this.otros)
-        console.dir(this.conocido)
         if(e.target.value=="Otros"){
             this.otros.classList.remove('input-hidden')
         }
     }
 
-   comprobarLongitudTextArea(e){
+    comprobarLongitudTextArea(e){
         let cadenaTextArea = e.target.value;          
         let totalPalabras = this.contarPalabras(cadenaTextArea);
         let palabrasSobrantes= totalPalabras - 150;
-        console.log(totalPalabras)
+        
         if (totalPalabras > 150){
-            this.textArea.setCustomValidity(`Este campo tiene${ totalPalabras} palabras y no puede contener más de 150, debes quitar, al menos, ${palabrasSobrantes} palabras`);               
+            this.textArea.setCustomValidity(`Este campo tiene ${totalPalabras} palabras y no puede contener más de 150, debes quitar al menos ${palabrasSobrantes} palabras`);               
         }else{
             this.textArea.setCustomValidity('');
         }     

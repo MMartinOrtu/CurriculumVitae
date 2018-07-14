@@ -90,7 +90,7 @@ nav a:hover, .active {
 section#portada header{
     padding: 5rem 0; 
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.5fr 1fr;
     justify-items: center;     
    
 }
@@ -113,11 +113,11 @@ section#portada .nombre{
     padding: .8rem;    
 }
 section#portada .image-portada-wrapper{
-   /* margin-top: 2rem; */
+    margin-right: 5rem;
     min-width: 300px;     
     background-repeat: no-repeat;
-    background-size: 70%;
-    background-position:bottom;
+    background-size: 80%;
+    background-position:center;
     /* background-position-y: 1rem; */
     background-image: url(./assets/Retrado_sinfondo2.png);
     animation: titulo 20s linear;
@@ -406,6 +406,7 @@ footer p{
     }
     section#portada .image-portada-wrapper{
        /*  width:95%; */
+        margin-right: 0;
         height: 50vh;
         background-size: 60%;        
     }
@@ -449,8 +450,7 @@ footer p{
        font-size: 1.1rem;
     }
     section#experiencia .experiencia-imagen{
-        width: 95%;
-        
+        width: 100%;        
     }
     section#contacto input, section#contacto textarea,
     section#contacto button{
@@ -494,7 +494,6 @@ footer p{
     section#portada .image-portada-wrapper{
         width:85%;
         height: 300px;
-        background-size: 30%;
-                
+        background-size: 30%;                
     }
 }
