@@ -33,5 +33,6 @@ export class Form {
             
         }  
         console.dir(this.datosForm)
+        this.formContact.reset();
     }
 }
