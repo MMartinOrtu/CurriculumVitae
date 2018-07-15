@@ -42,8 +42,7 @@ export class Main{
     addMenu(){        
         document.querySelector('.menu-top').classList.add('hidden');
     }
-    removeMenu(e){
-        console.log(e);
+    removeMenu(e){        
         document.querySelector('.menu-top').classList.remove('hidden');
     }
 
@@ -79,7 +78,7 @@ export class Main{
     readContact(e){
         e.preventDefault(); 
         let form = new Form();
-     
+       
         if (this.formContact.checkValidity()){ 
         form.guardarDatos();
         }  

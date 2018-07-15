@@ -19,8 +19,7 @@ export class Form {
           }   
        
     }
-   
-
+     
     guardarDatos(){
         console.log('guardando datos')
         this.datosForm ={
@@ -29,10 +28,10 @@ export class Form {
             phone:this.phone.value,
             conocidoPor: this.conocido.value,
             otros: this.otros.value,
-            message:this.textArea.value
-            
+            message:this.textArea.value            
         }  
         console.dir(this.datosForm)
         this.formContact.reset();
     }
+   
 }

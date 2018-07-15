@@ -10,9 +10,6 @@ html{
 body{
     font-family: 'PT Mono', monospace;
 }
-/* *{
-    border: 1px solid red;
-} */
 
 /* Header y nav */
 
@@ -50,10 +47,6 @@ nav a:hover, .active {
     color: var(--color-naranja);
     border-bottom: 3px solid var(--color-naranja); 
 }
-.active {
-    color: var(--color-naranja);
-    border-bottom: 3px solid var(--color-naranja); 
-}
 
 /* Icono-Header */
 
@@ -86,8 +79,10 @@ nav a:hover, .active {
     transform: translate(-50%, -50%) rotate(360deg);
   }
     
+  
 /* Section portada */
-section#portada header{
+
+section#portada header{    
     padding: 5rem 0; 
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -124,40 +119,6 @@ section#portada .image-portada-wrapper{
     animation-fill-mode: backwards;
 }
 
-/* section#portada header{
-    height: 100vh;        
-}
-section#portada h1{
-    float:left;
-    width:55%;
-    min-width: 320px;    
-    padding-top:12%;
-    text-align: center;
-    font-size: 4rem;
-    line-height: 1.4;
-    color: var(--color-logo);
-}
-section#portada .hola{
-    font-size:7rem;
-    color:var(--color-naranja);
-}
-section#portada .nombre{
-    color: white;
-    background-color:var(--color-naranja);
-    padding: .8rem;    
-}
-section#portada .image-portada-wrapper{
-    height: 100vh;
-    width: 40%;
-    min-width: 320px; 
-    float:left; 
-    background-repeat: no-repeat;
-    background-size: 60%;
-    background-position: center;
-    background-image: url(./assets/Retrado_sinfondo2.png);
-    animation: titulo 20s linear;
-    animation-fill-mode: backwards;
-} */
 @keyframes titulo {
     0% {
     transform:  scale(1);
@@ -210,6 +171,7 @@ section p{
     text-align: justify;
     line-height: 1.4;
 }
+
 
 /* Sección sobre mi */
 
@@ -265,6 +227,7 @@ section#formacion .cv>a{
     font-size: 2.5rem;
 }
 
+
 /* Experiencia */
 
 .fa-linkedin{
@@ -284,6 +247,7 @@ section#experiencia .experiencia-imagen{
 section#experiencia p:nth-of-type(4){
     display:inline-block;   
 }
+
 
 /* Sección Contacto */
 
@@ -315,11 +279,9 @@ section#contacto textarea{
     padding: 0.2rem;
     margin-bottom:1rem;
 }
-
 .input-hidden{
     display:none;
 }
-
 input#otros{
     background-color: rgba(166, 213, 231, 0.877);
 }
@@ -327,7 +289,7 @@ input#otros{
 
 /* Footer */
 footer p{
-    margin-top: 3rem;
+    margin: 2rem;
     text-align: center;
     font-family: 'PT Mono', monospace;  
     color: var(--color-logo);
@@ -335,6 +297,7 @@ footer p{
 .fa-bars{
     display:none;
 }
+
 @media screen and (max-width: 820px){
     .menu-top{
         display:none;
@@ -351,8 +314,8 @@ footer p{
         background-color: var(--color-azul);              
     } 
     .header-nav-wrapper header{
-    margin-top: .4rem;
-    margin-left: 6%;   
+        margin-top: .4rem;
+        margin-left: 6%;   
     }
     .border-logo{    
         width: 2.5rem;
@@ -405,10 +368,9 @@ footer p{
         color:var(--color-naranja);
     }
     section#portada .image-portada-wrapper{
-       /*  width:95%; */
         margin-right: 0;
-        height: 50vh;
-        background-size: 60%;        
+        height: 60vh;
+        background-size: 55%;        
     }
 
     section#sobre-mi header{
@@ -458,13 +420,10 @@ footer p{
     }
 }
 @media screen and (max-width: 480px){
-  /*   section#portada header{
-        height: 60vh;        
-    } */
+
     section#portada .image-portada-wrapper{
         width:85%;
-        height: 15rem;
-        /* margin-top: 2rem; */
+        height: 18rem;
         background-size: 50%;
         background-position-x: 50%;        
     }
@@ -487,7 +446,8 @@ footer p{
     font-size: 1.1rem;
     }
 }
-@media screen and (max-height: 520px){
+@media screen and (max-height: 380px){
+
     section#portada h1{
         padding:2rem 0;
     } 
