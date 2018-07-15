@@ -435,10 +435,8 @@ footer p{
         font-size:4rem;
         color:var(--color-naranja);
     }
-    .line{
-        height: 320px;
-        width: 100%;
-        border-bottom: 0px solid white;
+    section h2{
+        font-size: 2.5rem;       
     }
 
     section#contacto input, section#contacto textarea,
