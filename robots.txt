@@ -1,0 +1,2 @@
+User-Agent: *
+Sitemap: https://mmartinortu.github.io/CurriculumVitae/sitemap.xml
