@@ -51,13 +51,14 @@
         </nav>
        
     </div>
+    <span itemscope itemtype="http://schema.org/Person"></span>
     <section id="portada">            
         <header>           
             <h1>
-                <span class="hola">¡Hola!</span><br>Me llamo<br><span class="nombre">Miguel Martín</span> 
+                <span class="hola">¡Hola!</span><br>Me llamo<br><span  itemprop="name" class="nombre">Miguel Martín</span> 
             </h1> 
                        
-            <div class="image-portada-wrapper"></div>         
+            <div class="image-portada-wrapper" itemprop="image"></div>         
         </header>
             
     </section>
@@ -68,14 +69,14 @@
         </header>
         <article>
              <figure class="sobre-mi-imagen">
-                <img src="./assets/Sobre-mi2.png" alt="Miguel Martín, programador junior" height="60%"width="60%" >
+                <img src="./assets/Sobre-mi2.png" itemprop="image" tittle= "Miguel Martín, programador junior" alt="Miguel Martín, programador junior" height="60%"width="60%" >
             </figure>
-            <div class="text-sobre-mi-wrapper">            
+            <div class="text-sobre-mi-wrapper" itemprop="description">            
                 <p>Hace ya algún tiempo que empecé a sentir inquietud por el mundo de la programación y el desarrollo web. 
-                    Desde entonces ando formándome y preparándome cada día para ser un buen programador.</p>             
+                    Desde entonces ando formándome y preparándome cada día para ser un buen <span itemprop="jobTitle">programador</span>.</p>             
                 <p>Antes de darme por esto de la programación he hecho muchas cosas...estudié Ciencias Ambientales, viví un tiempo en Inglaterra (estudiando y trabajando para aprender inglés)
                     y, los últimos 9 años, trabajé como gerente en una ONG.</p>
-                <p>Actualmente vivo en Jerez de la Frontera, soy padre de un pequeño de 2 años, por lo que ya estoy entrenado en la falta de sueño, para cuando haya que pasar la noche programando...je,je!
+                <p>Actualmente vivo en <span itemprop="homeLocation">Jerez de la Frontera</span>, soy padre de un pequeño de 2 años, por lo que ya estoy entrenado en la falta de sueño, para cuando haya que pasar la noche programando...je,je!
                     Me gusta el deporte, sobre todo el baloncesto y, ahora mismo, pasar tiempo con mi familia y amigos, eso es lo que más valoro. :-) </p>
             </div>
            
@@ -88,7 +89,7 @@
         <article>
             <div class="formacion-text-wrapper">
             <p>Actualmente, estoy cursando el <span class="resaltar-texto">Ciclo Superior de formación profesional de Desarrollo de Aplicaciones Multiplataforma</span>
-                en la UOC (Universidad Oberta de Catalunya) y el <span class="resaltar-texto">Web Development Bootcamp</span> en Keepcoding.</p>
+                en la <span itemprop="alumniOf">UOC (Universidad Oberta de Catalunya)</span> y el <span class="resaltar-texto">Web Development Bootcamp</span> en <span itemprop="alumniOf">Keepcoding</span>.</p>
             <p>En cuanto a idiomas, domino bien el inglés, tengo el <span class="resaltar-texto">C1 y el IELTS</span>.</p>
             <p>A lo largo de los últimos meses he realizado diferentes cursos, seminarios y tutoriales de programación sobre las siguientes tecnologías:</p>
             <p class ="lenguajes">JavaScript / HTML5 / CSS3 / GIT / React / Python / Node </p>
@@ -118,7 +119,7 @@
             <h2>Experiencia</h2>
         </header>
          <figure class="experiencia-imagen">
-                <img src="./assets/ordenador2.jpg" alt="Miguel Martín, programador junior" height="50%"width="50%" >
+                <img src="./assets/ordenador2.jpg" title="Miguel Martín, programador junior" alt="Miguel Martín, programador junior" height="50%"width="50%" >
          </figure>
         <article>
             <p>A lo largo de mi carrera he tenido diferentes trabajos, ninguno vinculado directamente con el sector del desarrollo web.
@@ -132,8 +133,7 @@
             <p>Puedes consultar más sobre mi experiencia laboral en Linkedin: </p>
             <a href="https://www.linkedin.com/in/miguel-martin-ortu%C3%B1o-1919baa1" target="_blank"><i class="fab fa-linkedin fa-5x"></i></a>
         </article>
-       
-         
+                
     </section> 
     <section id="contacto" class="secciones">
         <header>
