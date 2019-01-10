@@ -76,7 +76,7 @@ export class Main{
     }
 
     readContact(e){
-        e.preventDefault(); 
+        //e.preventDefault(); 
         let form = new Form();
        
         if (this.formContact.checkValidity()){ 
