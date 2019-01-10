@@ -1,9 +1,9 @@
 var TO_ADDRESS = "pomikelor@gmail.com"; // where to send form data
 
-function doPost(e) {
+function doPost() {
 
   try {
-    Logger.log(e); // the Google Script version of console.log see: Class Logger
+    Logger.log(); // the Google Script version of console.log see: Class Logger
     MailApp.sendEmail(TO_ADDRESS, "Contact Form Submitted",
                       JSON.stringify(e.parameters));
     // return json success results
@@ -19,3 +19,5 @@ function doPost(e) {
           .setMimeType(ContentService.MimeType.JSON);
   }
 }
+
+doPost();
