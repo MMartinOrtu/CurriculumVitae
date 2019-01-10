@@ -22,7 +22,7 @@ export class Main{
 
     defineEventListener(){
         //Evento que maneja el envío del formulario
-        this.formContact.addEventListener('submit', this.readContact.bind(this));
+       // this.formContact.addEventListener('submit', this.readContact.bind(this));
 
         //Evento para quitar y poner el menú de navegación oculto
         this.iconoMenu.addEventListener('click', this.addMenu);
@@ -76,7 +76,7 @@ export class Main{
     }
 
     readContact(e){
-        //e.preventDefault(); 
+        e.preventDefault(); 
         let form = new Form();
        
         if (this.formContact.checkValidity()){ 
