@@ -26,11 +26,22 @@ $email_message .= "Comentarios: " . $_POST['message'] . "\n\n";
 
 
 // Ahora se envía el e-mail usando la función mail() de PHP
-$headers = 'From: '.$email_from."\r\n".
+/* $headers = 'From: '.$email_from."\r\n".
 'Reply-To: '.$email_from."\r\n" .
-'X-Mailer: PHP/' . phpversion();
-mail($email_to, $email_subject, $email_message, $headers);
+'X-Mailer: PHP/' . phpversion(); */
+sendmail($email_to, $email_subject, $email_message);
 
 echo "¡El formulario se ha enviado con éxito!";
+}
+
+function sendmail($to, $subject, $message) {
+	$headers = "MIME-Version: 1.0" . "\r\n";
+	$headers .= "Content-type:text/html;charset=iso-8859-1" . "\r\n";
+	$headers .= 'From: ' . . "\r\n";
+	
+	$result = mail($to,$subject,$message,$headers);
+	
+	if ($result) return 1;
+	else return 0;
 }
 ?>
