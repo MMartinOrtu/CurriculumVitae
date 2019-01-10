@@ -1,4 +1,4 @@
-?php
+<?php
 if(isset($_POST['email'])) {
 
   // Debes editar las próximas dos líneas de código de acuerdo con tus preferencias
